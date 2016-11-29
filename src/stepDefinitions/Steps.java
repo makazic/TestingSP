@@ -31,48 +31,29 @@ public class Steps {
         System.out.println(result);
 
     }
+    
     @Then("^I should click staff icon on the left$")
     public void iShouldClickStaffIconOnTheLeft() throws Throwable {
-//        System.setProperty("webdriver.chrome.driver", "C:\\Users\\Makazic\\Desktop\\jars\\chromedriver.exe");
-
-
         driver.findElement(By.xpath("//*[@id=\"sn_staff\"]/i")).click();
-        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-
-
-
     }
-
 
     @And("^I click on 'Add Employees' button$")
     public void iClickOnAddEmployeesButton() throws Throwable {
-//        System.setProperty("webdriver.chrome.driver", "C:\\Users\\Makazic\\Desktop\\jars\\chromedriver.exe");
-        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
         driver.findElement(By.id("act_primary")).click();
-//        driver.get("https://www.shiftplanning.com/app/staff/add");
-
     }
-
 
     @Then("^I close the browser$")
     public void closeBrowser() throws Throwable {
         driver.quit();
     }
 
-
     @Then("^I should click clock icon on the left$")
     public void iShouldClickClockIconOnTheLeft() throws Throwable {
-//        System.setProperty("webdriver.chrome.driver", "C:\\Users\\Makazic\\Desktop\\jars\\chromedriver.exe");
-
-
         driver.findElement(By.xpath("//*[@id=\"sn_timeclock\"]/i")).click();
-        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
-
     }
 
     @And("^I click on 'CheckIn/CheckOut' button$")
     public void iClickOnCheckInCheckOutButton() throws Throwable {
-//        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
         driver.findElement(By.id("tc_tl_ci")).click();
     }
 }
