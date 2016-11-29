@@ -1,2 +1,4 @@
 Add libraries from the folder "lib" to the project as dependencies 
-change the string 
+change the following string:
+System.setProperty("webdriver.chrome.driver", "C:\\Users\\Makazic\\Desktop\\jars\\chromedriver.exe");
+located in src/stepDefinitions/Steps.java to correspond with the location of chromedriver.exe in the lib folder
